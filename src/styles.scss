@@ -1,0 +1,110 @@
+/* Global styles for the table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+/* Styles for the buttons */
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0px 5px 0px 5px
+}
+
+button.update {
+    background-color: #3498db;
+    color: #fff;
+}
+
+button.delete {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+button.view {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+
+/* GLOBAL scss for forms*/
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    div {
+        margin-bottom: 15px;
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type="text"],
+        textarea {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+        }
+        textarea {
+            resize: vertical;
+            /* Allow vertical resizing for textarea */
+        }
+    }
+    .btn-submit {
+        padding: 8px 12px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #2ecc71;
+        color: #fff;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: #27ae60;
+        }
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            // background-color: #999;
+        }
+    }
+    button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #bebebe;
+        color: #fff;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        margin-right: 10px;
+        &:hover {
+            background-color: #7d7d7d;
+        }
+    }
+}

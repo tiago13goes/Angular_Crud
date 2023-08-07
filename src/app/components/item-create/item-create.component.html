@@ -1,0 +1,13 @@
+<h1 class="title">Create New Item</h1>
+<form #createForm="ngForm" (submit)="saveItem()">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="newItem.name" required name="name">
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="newItem.description" required name="description"></textarea>
+    </div>
+    <button class="btn-submit" type="submit" [disabled]="createForm.invalid">Save</button>
+    <button routerLink="/item/list">Voltar</button>
+</form>

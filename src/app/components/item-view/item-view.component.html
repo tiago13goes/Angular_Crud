@@ -1,0 +1,19 @@
+<div *ngIf="item != null; else templateName">
+    <h1 class="title">View Item</h1>
+    <form>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" [value]="item.name" name="name">
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description">{{item.description}}</textarea>
+        </div>
+        <button routerLink="/item/list">Voltar</button>
+    </form>
+</div>
+
+<ng-template #templateName>
+    <div>Item not found</div>
+    <button routerLink="/item/list">Voltar</button>
+</ng-template>

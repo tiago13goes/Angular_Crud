@@ -1,0 +1,13 @@
+<h1 class="title">Edit Item</h1>
+<form #updateForm="ngForm" (submit)="updateItem()">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="item.name" required name="name">
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="item.description" required name="description"></textarea>
+    </div>
+    <button class="btn-submit" type="submit" [disabled]="updateForm.invalid">Update</button>
+    <button routerLink="/item/list">Voltar</button>
+</form>

@@ -1,0 +1,17 @@
+<h1>List of Items</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let item of items">
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+            <button class="delete" (click)="deleteItem(item.id)">Delete</button>
+            <button class="view" routerLink="/item/view/{{ item.id }}">Detail</button>
+            <button class="update" routerLink="/item/update/{{ item.id }}">Edit</button>
+        </td>
+    </tr>
+</table>
